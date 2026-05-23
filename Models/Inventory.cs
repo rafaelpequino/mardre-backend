@@ -7,22 +7,22 @@ namespace Echeinbetter.Models
         public int Id { get; set; }
 
         [MaxLength(100)]
-        public string Category { get; set; }
+        public required string Category { get; set; }
 
         [MaxLength(200)]
-        public string Product { get; set; }
+        public required string Product { get; set; }
 
         [MaxLength(100)]
-        public string Batch { get; set; }
+        public required string Batch { get; set; }
 
         [MaxLength(50)]
-        public string Quad { get; set; }
+        public required string Quad { get; set; }
 
         [MaxLength(100)]
-        public string BarCode { get; set; }
+        public required string BarCode { get; set; }
 
         [MaxLength(500)]
-        public string Note { get; set; }
+        public string? Note { get; set; }
     }
 }
 

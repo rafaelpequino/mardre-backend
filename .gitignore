@@ -1,5 +1,37 @@
+# =========================
+# Build outputs
+# =========================
+bin/
+obj/
+
+# =========================
+# Environment & secrets
+# =========================
 .env
 .env.*
+!.env.example
+
+# =========================
+# Visual Studio / VS Code
+# =========================
 .vs/
-obj/
-bin/
+.vscode/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# =========================
+# NuGet
+# =========================
+*.nupkg
+*.snupkg
+.nuget/
+packages/
+
+# =========================
+# Logs & temp files
+# =========================
+*.log
+*.tmp
+*.cache
