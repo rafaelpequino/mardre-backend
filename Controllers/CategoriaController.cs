@@ -1,9 +1,9 @@
-using Echeinbetter.Database;
-using Echeinbetter.Dtos;
-using Echeinbetter.Models;
+﻿using Mardre.Database;
+using Mardre.Dtos;
+using Mardre.Models;
 using Microsoft.AspNetCore.Mvc;
 
-namespace Echeinbetter.Controllers
+namespace Mardre.Controllers
 {
     public class CategoriaController
     {

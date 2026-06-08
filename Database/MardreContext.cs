@@ -1,8 +1,8 @@
-﻿using Echeinbetter.Models;
+﻿using Mardre.Models;
 using Microsoft.EntityFrameworkCore;
 using DotNetEnv;
 
-namespace Echeinbetter.Database
+namespace Mardre.Database
 {
     public class EngenhariasSenacContext : DbContext
     {

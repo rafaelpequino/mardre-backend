@@ -1,4 +1,4 @@
-using Echeinbetter.Endpoints;
+﻿using Mardre.Endpoints;
 
 var builder = WebApplication.CreateBuilder(args);
 

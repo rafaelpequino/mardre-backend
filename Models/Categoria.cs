@@ -1,7 +1,7 @@
-using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace Echeinbetter.Models
+namespace Mardre.Models
 {
     [Table("Categorias")]
     public class Categoria

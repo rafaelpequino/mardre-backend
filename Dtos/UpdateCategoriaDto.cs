@@ -1,6 +1,6 @@
-using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel.DataAnnotations;
 
-namespace Echeinbetter.Dtos
+namespace Mardre.Dtos
 {
     public class UpdateCategoriaDto
     {

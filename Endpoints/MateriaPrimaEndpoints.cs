@@ -1,6 +1,6 @@
-using Echeinbetter.Controllers;
+﻿using Mardre.Controllers;
 
-namespace Echeinbetter.Endpoints;
+namespace Mardre.Endpoints;
 
 public static class MateriaPrimaEndpoints
 {

@@ -1,7 +1,7 @@
-@Echeinbetter_HostAddress = http://localhost:5136
+﻿@Mardre_HostAddress = http://localhost:5136
 
 # Buscar todos os itens (sem filtro)
-POST {{Echeinbetter_HostAddress}}/api/inventory/search
+POST {{Mardre_HostAddress}}/api/inventory/search
 Content-Type: application/json
 
 {}
@@ -9,7 +9,7 @@ Content-Type: application/json
 ###
 
 # Buscar por BarCode específico
-POST {{Echeinbetter_HostAddress}}/api/inventory/search
+POST {{Mardre_HostAddress}}/api/inventory/search
 Content-Type: application/json
 
 {
@@ -19,7 +19,7 @@ Content-Type: application/json
 ###
 
 # Buscar por BarCode parcial (case-insensitive)
-POST {{Echeinbetter_HostAddress}}/api/inventory/search
+POST {{Mardre_HostAddress}}/api/inventory/search
 Content-Type: application/json
 
 {

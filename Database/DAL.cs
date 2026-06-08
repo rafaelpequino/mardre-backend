@@ -1,4 +1,4 @@
-﻿namespace Echeinbetter.Database;
+﻿namespace Mardre.Database;
 internal class DAL<T> where T : class
 {
     protected readonly EngenhariasSenacContext context;
