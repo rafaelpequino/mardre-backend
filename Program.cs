@@ -3,12 +3,12 @@
 var builder = WebApplication.CreateBuilder(args);
 
 
-// Configurar CORS para aceitar todas as origens
+// Configurar CORS
 builder.Services.AddCors(options =>
 {
     options.AddPolicy("AllowAll", policy =>
     {
-        policy.AllowAnyOrigin()
+        policy.WithOrigins("http://master-fron-1mgghl-77be1c-2-25-185-88.sslip.io")
               .AllowAnyMethod()
               .AllowAnyHeader();
     });
@@ -26,10 +26,10 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
-app.UseHttpsRedirection();
-
 // Usar a política de CORS
 app.UseCors("AllowAll");
+
+app.UseHttpsRedirection();
 
 app.UseAuthorization();
 
