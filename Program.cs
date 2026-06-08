@@ -29,8 +29,6 @@ if (app.Environment.IsDevelopment())
 // Usar a política de CORS
 app.UseCors("AllowAll");
 
-app.UseHttpsRedirection();
-
 app.UseAuthorization();
 
 app.MapControllers();
