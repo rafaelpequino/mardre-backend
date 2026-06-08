@@ -2,6 +2,7 @@ using Echeinbetter.Endpoints;
 
 var builder = WebApplication.CreateBuilder(args);
 
+
 // Configurar CORS para aceitar todas as origens
 builder.Services.AddCors(options =>
 {
@@ -34,6 +35,8 @@ app.UseAuthorization();
 
 app.MapControllers();
 
-app.AddInventoryEndpoints();
+app.AddCategoriaEndpoints();
+app.AddMateriaPrimaEndpoints();
+app.AddProcessamentoEndpoints();
 
 app.Run();

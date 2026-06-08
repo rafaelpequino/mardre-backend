@@ -1,13 +1,14 @@
 ﻿using Echeinbetter.Models;
 using Microsoft.EntityFrameworkCore;
 using DotNetEnv;
-using Pomelo.EntityFrameworkCore.MySql.Infrastructure;
 
 namespace Echeinbetter.Database
 {
     public class EngenhariasSenacContext : DbContext
     {
-        public DbSet<Inventory> Inventories { get; set; } = null!;
+        public DbSet<Categoria> Categorias { get; set; } = null!;
+        public DbSet<MateriaPrima> MateriasPrimas { get; set; } = null!;
+        public DbSet<Processamento> Processamentos { get; set; } = null!;
 
         private readonly string? connectionString;
 
@@ -22,9 +23,14 @@ namespace Echeinbetter.Database
             if (string.IsNullOrEmpty(connectionString))
                 throw new InvalidOperationException("CONNECTION_STRING environment variable not found");
 
-            var serverVersion = new MySqlServerVersion(new Version(8, 0, 36));
-
-            optionsBuilder.UseMySql(connectionString, serverVersion);
+            optionsBuilder.UseSqlServer(connectionString, options =>
+            {
+                options.EnableRetryOnFailure(
+                    maxRetryCount: 5,
+                    maxRetryDelay: TimeSpan.FromSeconds(10),
+                    errorNumbersToAdd: null
+                );
+            });
         }
     }
 }
